@@ -267,7 +267,7 @@ object msgpack {
       val buffer = new Array[Value](indexesSet.size * 2)
       var bufferIdx = 0
 
-      for (i <- 0 to (keys.size * 2) by 2 if indexesSet contains i) {
+      for (i <- 0 to keys.size * 2 by 2 if indexesSet contains i) {
         buffer(bufferIdx) = elements(i)
         buffer(bufferIdx + 1) = elements(i + 1)
         bufferIdx = bufferIdx + 2
